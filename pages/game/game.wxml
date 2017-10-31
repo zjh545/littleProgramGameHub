@@ -1,0 +1,85 @@
+<!--pages/game/game.wxml-->
+<!-- 个人信息 -->
+<view class="column-flex">
+  <view class="row-flex top-panel">
+      <view class="row-flex image-align-center top-head-padding">
+          <Image class="image-head" mode='aspectFit' src="../../resource/common/icon.png"/>
+      </view>
+      <view class="column-flex top-text-padding">
+          <text class="text-name">玩家的名字七个字</text>
+          <view class="row-flex flex-justify-content-between ">
+              <view class="row-flex image-align-center">
+                  <text class='level-text'>等级：</text>
+                  <text>Lv99</text>
+              </view>
+              <view class="row-flex image-align-center ">
+                  <Image class="image-coin" mode='aspectFit' src="../../resource/common/coin.png"/>
+                  <text class='level-text'>金币：</text>
+                  <text>999</text>
+                  <Image class="image-add" src="../../resource/common/add.png"/>
+              </view>
+          </view>
+      </view>
+  </view>
+  <!-- 后宫、福利 -->
+  <view class="row-flex flex-align-item view-harem">
+    <view class='row-flex flex-align-item flex-justify-content-center view-harem-item'>
+      <image class='harem-image'  src="../../resource/game/harem.png"/>
+      <view class='column-flex'>
+        <text>后宫</text>
+        <text class='view-harem-item-text'>养奴隶赚金币</text>
+      </view>
+    </view>
+    <view class='row-flex flex-align-item flex-justify-content-center view-harem-item'>
+      <image class='harem-image' src="../../resource/game/welfare.png"/>
+      <view class='column-flex'>
+        <text>福利</text>
+        <text class='view-harem-item-text'>免费领取金币</text>
+      </view>
+    </view>
+  </view>
+  <!-- 广告 -->
+  <swiper autoplay="false" class="view-advertise">
+    <block wx:for="{{advertiseLists}}" wx:for-item="advertiseItem">
+        <swiper-item class="flex-align-item">
+          <image class="view-advertise-image-1" src='{{advertiseItem.bg}}'></image>
+            <block wx:if="{{advertiseItem.id == 1}}">
+                <view class="column-flex advertiseItem-1">
+                    <text class="view-advertise-text-1">今日花魁</text>
+                    <text class="view-advertise-text-2">玩家名字七个字</text>
+                    <text class="view-advertise-text-3">进入排行榜 >></text>
+                </view>
+            </block>
+        </swiper-item>
+    </block>
+  </swiper>
+  <!-- 游戏列表 -->
+  <view class='column-flex game-list'>
+    <block wx:for='{{gameList}}' wx:for-item='gameItem'>
+        <view class="game-list-item">
+          <image class='game-list-item-image' mode='widthFix' src='{{gameItem.bg}}'></image>
+          <view class="column-flex gameList-item-text">
+            <text class='game-list-item-text-1'>{{gameItem.name}}</text>
+            <view class='row-flex'>
+              <text class='game-list-item-text-2'>{{gameItem.num}}</text>
+              <text class='game-list-item-text-2'>人在玩</text>
+            </view>       
+            <text class='game-list-item-text-3'>进入游戏>></text>
+          </view>
+        </view>
+    </block>
+  </view>
+  <!-- 加入指定房间 包房 建临时房间 -->
+  <view class="row-flex flex-justify-content-around">
+    <block wx:for='{{iconLists}}' wx:for-item='icon'>
+        <view class="icon-view-item">
+          <Image class="icon-view-item-bg"  src="../../resource/common/bg_green.png"></Image>
+          <view class="column-flex flex-justify-content-center icon-view-item-view">
+            <Image class="icon-view-item-icon" mode='aspectFit'  src="{{icon.icon}}"></Image>  
+            <text class="icon-view-item-text">{{icon.name}}</text>
+          </view>
+        </view>
+    </block>
+  </view>
+
+</view>

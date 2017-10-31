@@ -1,0 +1,75 @@
+/* pages/message/message.wxss */
+page {  
+    display: block;  
+    min-height: 100%;  
+    background-color: #eaebf0;  
+}
+.page-message {
+    height: 100%;
+}
+.friend-message-scroller {
+    white-space: nowrap;
+    display: flex;
+    height: 295rpx;
+    flex-direction: column;
+     padding: 0rpx 0rpx 0rpx 0rpx;
+}
+.friend-message-item {
+    width:245rpx;
+    height:295rpx;
+    padding: 0rpx 10rpx 0rpx 0rpx;
+    display: inline-block;
+}
+.friend-message-item-bg {
+    position: absolute;
+    width:245rpx;
+    height:295rpx;
+    z-index: -10;
+}
+.friend-message-item-contents {
+    /* position:  */
+}
+.image-head {
+    padding: 20rpx 0rpx 30rpx 0rpx;
+}
+.friend-message-item-contents-radies {
+    height: 50rpx;
+    border-radius: 25rpx;
+    border-style: solid;
+    border-width: 1rpx;
+    border-color:red;
+}
+.friend-message-item-contents-text {
+    font-size: 30rpx;
+}
+.friend-message-item-contents-radies-innner-text {
+    font-size: 25rpx;
+    color: red;
+    padding: 0rpx 10rpx 0rpx 10rpx;
+}
+.notice-view {
+    margin: 5rpx 0rpx 5rpx 0rpx;
+    padding: 0rpx 30rpx 0rpx 30rpx;
+    background-color: white;
+}
+.notice-icon-view {
+    padding: 20rpx 0rpx 20rpx 0rpx;
+}
+.notice-view-icon {
+    width:110rpx;
+    height:110rpx;
+    padding: 0rpx 20rpx 0rpx 0rpx;
+}
+.message-scroller {
+    flex: 1;
+    height: 100%;
+}
+.message-item {
+    background-color: white;
+    padding: 0rpx 30rpx 0rpx 30rpx;
+    margin: 0rpx 0rpx 5rpx 0rpx;
+}
+.message-item-time-text {
+    color: #bbbbbb;
+    font-size: 30rpx;
+}

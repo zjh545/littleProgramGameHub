@@ -1,0 +1,35 @@
+<!--pages/message/message.wxml-->
+<!-- <text>pages/message/message.wxml</text> -->
+<view class="column-flex page-message">
+    <scroll-view class="friend-message-scroller" scroll-x style="width: 100%" scroll-left="0">
+        <view class="friend-message-item" wx:for="{{friendMsgLists}}" wx:for-item="fMsgItem">
+            <Image class="friend-message-item-bg" src="../../resource/message/msg_sex_bg_{{fMsgItem.sex}}.png"/>
+            <view class="column-flex flex-align-item friend-message-item-contents">
+                <Image class="image-head" src="../../resource/common/icon.png"/>
+                <view class="row-flex flex-align-item">
+                    <Image class="sex-image" src="../../resource/common/sex_{{fMsgItem.sex}}.png"/>
+                    <text class="friend-message-item-contents-text">{{fMsgItem.name}}</text>
+                </view>
+                <view class="friend-message-item-contents-radies flex-align-item">
+                    <text class="friend-message-item-contents-radies-innner-text">正在玩{{fMsgItem.game}}</text>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+    <view class="notice-view row-flex flex-align-item flex-justify-content-between">
+        <view class="flex-align-item notice-icon-view">
+            <Image class="notice-view-icon"  mode="aspectFit" src="../../resource/message/msg_notice.png"></Image>
+            <text class="">通知</text>
+        </view>
+        <Image class="back" src="../../resource/common/back.png"/>
+    </view>
+    <scroll-view class="message-scroller">
+        <view class="message-item row-flex flex-justify-content-between flex-align-item" wx:for="{{messageLists}}" wx:for-item="msgItem">
+        <view class="flex-align-item notice-icon-view">
+            <Image class="notice-view-icon"  mode="aspectFit" src="../../resource/common/icon.png"></Image>
+            <text>{{msgItem.name}}</text>
+        </view> 
+        <text class="message-item-time-text">一分钟前</text>
+        </view>
+    </scroll-view>
+</view>

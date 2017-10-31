@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/game/game",
+    "pages/myself/myself",
+    "pages/message/message",
+    "pages/room/room",
+    "pages/logs/logs",
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#fcaf3b",
+    "list": [
+      {
+        "pagePath": "pages/game/game",
+        "text": "游戏",
+        "iconPath": "resource/menu_icon_4_n.png",
+        "selectedIconPath": "resource/menu_icon_4_h.png"
+      },
+      {
+        "pagePath": "pages/room/room",
+        "text": "包房",
+        "iconPath": "resource/menu_icon_1_n.png",
+        "selectedIconPath": "resource/menu_icon_1_h.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "resource/menu_icon_3_n.png",
+        "selectedIconPath": "resource/menu_icon_3_h.png"
+      },
+      {
+        "pagePath": "pages/myself/myself",
+        "text": "我",
+        "iconPath": "resource/menu_icon_2_n.png",
+        "selectedIconPath": "resource/menu_icon_2_h.png"
+      }
+    ]
+  }
+}

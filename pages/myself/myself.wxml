@@ -1,0 +1,24 @@
+<!--pages/myself/myself.wxml-->
+<!-- <text>pages/myself/myself.wxml</text> -->
+<view class="row-flex flex-align-item my">
+    <Image class="image-head"  mode="aspectFit" src="../../resource/common/icon.png"></Image>
+    <view class="row-flex flex-justify-content-between flex-align-item my-text-view">
+        <view class="column-flex">
+            <text class="my-view-text-1">玩家名字七个字</text>
+            <text class="my-view-text-2">囧玩吧号：111111</text>
+        </view>
+        <Image class="back" src="../../resource/common/back.png"/>
+    </view>
+</view>
+<view class="column-flex">
+    <block wx:for="{{moduleLists}}" wx:for-item="moduleItem">
+        <view class="row-flex module-item">
+            <Image class="module-item-icon" src="{{moduleItem.icon}}"/>
+            <view class="row-flex flex-align-item flex-justify-content-between module-item-text-view">
+                <text>{{moduleItem.title}}</text>
+                <Image class="back" src="../../resource/common/back.png"/>
+            </view>
+            </view>
+    </block>
+
+</view>
