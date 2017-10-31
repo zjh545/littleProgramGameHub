@@ -1,6 +1,5 @@
 <!--pages/room/room.wxml-->
-<!-- <text>pages/room/room.wxml</text> -->
-<view class="btn-area">
-    <navigator url="/pages/room/myRoom/myRoom" open-type="switchTab" hover-class="navigator-hover">我的包间</navigator>
-    <navigator url="/pages/room/gameRoom/gameRoom" open-type="switchTab" hover-class="other-navigator-hover">游戏包间</navigator>
+<view class="swiper-tab row-flex flex-justify-content-between">
+    <view class="swiper-tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">我的包间</view>
+    <view class="swiper-tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">游戏包间</view>
 </view>

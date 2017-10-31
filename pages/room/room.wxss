@@ -1,10 +1,23 @@
 /* pages/room/room.wxss */
-/** wxss **/
-/** 修改默认的navigator点击态 **/
-.navigator-hover {
-    color:blue;
+/* http://blog.csdn.net/qq_31383345/article/details/52900835 */
+.swiper-tab {
+    height:80rpx;
 }
-/** 自定义其他点击态样式类 **/
-.other-navigator-hover {
-    color:red;
+.swiper-tab-item {
+    width:49.5%;
+    display: inline-block;
+    border-bottom:1rpx;
+    border-style:none none solid none;
+    border-color: #e2e2e2;
+    color: #000000;
+    text-align:center;
+}
+.on {
+    border-bottom:5rpx; 
+    border-style: none none solid none;
+    color: #febb26;
+    border-color: #febb26;
+
+
+
 }

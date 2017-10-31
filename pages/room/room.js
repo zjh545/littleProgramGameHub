@@ -5,10 +5,24 @@ Page({
    * 页面的初始数据
    */
   data: {
-
-
+    currentTab:0
   },
 
+  /** 
+   * 点击tab切换 
+   */
+  swichNav: function (e) {
+
+    var that = this;
+
+    if (this.data.currentTab === e.target.dataset.current) {
+      return false;
+    } else {
+      that.setData({
+        currentTab: e.target.dataset.current
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -25,7 +39,11 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    if(this.data.currentTab == "0") {
+      this.data.currentTab = "1";
+    } else {
+      this.data.currentTab = "0";
+    }
   },
 
   /**

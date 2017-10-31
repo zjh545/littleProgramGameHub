@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/room/room",
     "pages/game/game",
     "pages/myself/myself",
     "pages/message/message",
-    "pages/room/room",
     "pages/logs/logs",
     "pages/index/index",
     "pages/room/myRoom/myRoom",
