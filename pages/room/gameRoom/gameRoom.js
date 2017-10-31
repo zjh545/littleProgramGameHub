@@ -1,31 +1,29 @@
-// pages/room/room.js
+// pages/room/gameRoom/gameRoom.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
-
+    gameLists : [ 
+      {"id" : 100007, "lv" : 37, "desc":"玩家太懒了，什么也没有留下。", "game": "你画我猜", "man": 3, "woman": 3},
+      {"id" : 100009, "lv" : 37, "desc":"玩家太懒了，什么也没有留下。", "game": "你画我猜", "man": 6, "woman": 0},
+      {"id" : 100011, "lv" : 37, "desc":"玩家太懒了，什么也没有留下。", "game": "你画我猜", "man": 3, "woman": 3}
+    ] 
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.setNavigationBarTitle({
-      title: '包间',
-      success: function(res) {
-        // success
-      }
-    }) 
+  
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+  
   },
 
   /**

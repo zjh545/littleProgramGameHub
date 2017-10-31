@@ -1,31 +1,29 @@
-// pages/room/room.js
+// pages/room/myRoom/myRoom.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
-
+    roomLists: [
+      { "id": 100001, "lv": 37, "desc": "玩家太懒了，什么也没有留下。", "game": "你画我猜", "man": 3, "woman": 3 },
+      { "id": 100002, "lv": 37, "desc": "玩家太懒了，什么也没有留下。", "game": "你画我猜", "man": 3, "woman": 3 },
+      { "id": 100003, "lv": 37, "desc": "玩家太懒了，什么也没有留下。", "game": "你画我猜", "man": 3, "woman": 3 }
+    ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.setNavigationBarTitle({
-      title: '包间',
-      success: function(res) {
-        // success
-      }
-    }) 
+  
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+  
   },
 
   /**

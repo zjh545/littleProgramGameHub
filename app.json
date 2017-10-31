@@ -5,7 +5,9 @@
     "pages/message/message",
     "pages/room/room",
     "pages/logs/logs",
-    "pages/index/index"
+    "pages/index/index",
+    "pages/room/myRoom/myRoom",
+    "pages/room/gameRoom/gameRoom"
   ],
   "window": {
     "backgroundTextStyle": "light",
