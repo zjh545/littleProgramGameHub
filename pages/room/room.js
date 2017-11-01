@@ -25,9 +25,7 @@ Page({
    * 点击tab切换 
    */
   swichNav: function (e) {
-
     var that = this;
-
     if (this.data.currentTab === e.target.dataset.current) {
       return false;
     } else {
@@ -35,6 +33,13 @@ Page({
         currentTab: e.target.dataset.current
       })
     }
+  },
+  swiperSwichNav:function(e) {
+    var that = this;
+    that.setData({
+      // that.currentTab
+      currentTab : e.detail.current
+    })
   },
   /**
    * 生命周期函数--监听页面加载

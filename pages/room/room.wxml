@@ -8,7 +8,7 @@
         游戏包间
     </view>
 </view>
-<swiper class="swiper-content" current='{{currentTab}}' autoplay='{{autoplay}}' style="height:{{winHeight}}rpx;">
+<swiper class="swiper-content" current='{{currentTab}}' autoplay='{{autoplay}}' style="height:{{winHeight}}rpx;" bindchange='swiperSwichNav'>
     <swiper-item>
         <view class="column-flex room-list ">
             <block wx:for='{{roomLists}}' wx:for-item="roomItem">
