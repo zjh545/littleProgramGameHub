@@ -1,8 +1,8 @@
 {
   "pages": [
-    
-    "pages/task/task",
     "pages/game/game",
+    "pages/task/task",
+   
     "pages/room/room",
     "pages/myself/myself",
     "pages/message/message",

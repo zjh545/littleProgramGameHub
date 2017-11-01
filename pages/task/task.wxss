@@ -43,16 +43,33 @@ page {
 }
 .task-list-title-text {
     font-size: 30rpx;
-    color: #7c7f86;
+    color:#7c7f86;
 }
-.tesk-list-item {
+.task-list-item {
     background-color: white;
     margin-top: 10rpx;
+    padding: 10rpx 20rpx 10rpx 20rpx;
+}
+.task-list-item-text-1 {
+    font-size: 32rpx;
+    color: #7c7f86;
+}
+.task-list-item-text-2 {
+    font-size: 28rpx;
+    color: #ffc624;
+}
+.task-list-item-text-3 {
+    font-size: 28rpx;
+    padding-right: 10rpx;
 }
 .task-list-item-button-up {
     border-radius: 25rpx;
     height: 50rpx;
     background-color:#ffc624;
     color: white;
-    padding: 5rpx 15rpx 5rpx 15rpx;
+}
+.task-list-item-button-disabled {
+    border-radius: 25rpx;
+    height: 50rpx;
+    background-color:#7c7f86;
 }

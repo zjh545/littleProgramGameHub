@@ -1,5 +1,5 @@
 <!--pages/task/task.wxml-->
-<Image class="back task-back" src="../../resource/common/back.png"/>
+<Image class="back task-back" src="../../resource/common/back.png" bindtap='goBack'/>
 <view class="task-bg-view">
     <Image class="task-bg-image" mode="widthFix" src="../../resource/task/task_bg.png"/>
     <view class="row-flex flex-justify-content-around task-title-view">
@@ -15,16 +15,33 @@
 </view>
 <view class="column-flex">
     <block wx:for="{{newLists}}" wx:for-item="newListItem">
-        <view class="row-flex flex-justify-content-between tesk-list-item flex-align-item">
+        <view class="row-flex flex-justify-content-between task-list-item flex-align-item">
             <view class="column-flex">
-                <text>新手任务---------------</text>
-                <text>奖励100金币</text>
+                <text class="task-list-item-text-1">新手任务---------------</text>
+                <text class="task-list-item-text-2">奖励100金币</text>
             </view>
-            <view class="row-flex">
-                <text>3/3</text>
-                <button class="{{newListItem.cur >= newListItem.max ? 'task-list-item-button-up' : 'task-list-item-button-disabled'}}">领取</button>
+            <view class="row-flex flex-align-item">
+                <text class="task-list-item-text-3">{{newListItem.cur }}/{{newListItem.max}}</text>
+                <button size="mini"  class="task-list-item-button-up" disabled="{{newListItem.cur >=newListItem.max ? false : true}}">领取</button>
             </view>
         </view>
     </block>
-
 </view>
+<view class="task-list-title">
+    <text class="task-list-title-text">日常任务</text>
+</view>
+<view class="column-flex">
+    <block wx:for="{{dayLists}}" wx:for-item="dayListItem">
+        <view class="row-flex flex-justify-content-between task-list-item flex-align-item">
+            <view class="column-flex">
+                <text class="task-list-item-text-1">日常任务-------------</text>
+                <text class="task-list-item-text-2">奖励100金币</text>
+            </view>
+            <view class="row-flex flex-align-item">
+                <text class="task-list-item-text-3">{{dayListItem.cur }}/{{dayListItem.max}}</text>
+                <button size="mini"  class="task-list-item-button-up" disabled="{{dayListItem.cur >= dayListItem.max ? false : true}}">领取</button>
+            </view>
+        </view>
+    </block>
+</view>
+

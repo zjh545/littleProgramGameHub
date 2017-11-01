@@ -8,9 +8,18 @@ Page({
     newLists: [
       {"cur" : 3, "max" : 3},
       {"cur" : 1, "max" : 3}
+    ],
+    dayLists : [
+      {"cur" : 3, "max" : 3},
+      {"cur" : 1, "max" : 3}
     ]
-  },
 
+  },
+  goBack:function() {
+    wx.navigateBack({
+      delta: 1
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

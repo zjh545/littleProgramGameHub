@@ -30,7 +30,7 @@
         <text class='view-harem-item-text'>养奴隶赚金币</text>
       </view>
     </view>
-    <view class='row-flex flex-align-item flex-justify-content-center view-harem-item'>
+    <view class='row-flex flex-align-item flex-justify-content-center view-harem-item' bindtap='goToWelfare'>
       <image class='harem-image' src="../../resource/game/welfare.png"/>
       <view class='column-flex'>
         <text>福利</text>
