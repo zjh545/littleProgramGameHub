@@ -1,0 +1,30 @@
+<!--pages/task/task.wxml-->
+<Image class="back task-back" src="../../resource/common/back.png"/>
+<view class="task-bg-view">
+    <Image class="task-bg-image" mode="widthFix" src="../../resource/task/task_bg.png"/>
+    <view class="row-flex flex-justify-content-around task-title-view">
+        <Image class="task-title-image-1" mode="aspectFit" src="../../resource/task/task_title_bg_1.png"/>
+        <Image class="task-title-image-0" mode="aspectFit" src="../../resource/task/task_title_bg_0.png"/>
+    </view>
+</view>
+<view class="row-flex flex-justify-content-between task-list-title">
+    <text class="task-list-title-text">新手任务</text>
+    <view class="radius-1 flex-align-item">
+        <text class="radius-text-1">倒计时：5天</text>
+    </view>
+</view>
+<view class="column-flex">
+    <block wx:for="{{newLists}}" wx:for-item="newListItem">
+        <view class="row-flex flex-justify-content-between tesk-list-item flex-align-item">
+            <view class="column-flex">
+                <text>新手任务---------------</text>
+                <text>奖励100金币</text>
+            </view>
+            <view class="row-flex">
+                <text>3/3</text>
+                <button class="{{newListItem.cur >= newListItem.max ? 'task-list-item-button-up' : 'task-list-item-button-disabled'}}">领取</button>
+            </view>
+        </view>
+    </block>
+
+</view>

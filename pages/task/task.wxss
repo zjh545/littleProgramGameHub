@@ -1,0 +1,58 @@
+/* pages/task/task.wxss */
+page {  
+    display: block;  
+    min-height: 100%;  
+    background-color: #eaebf0;  
+} 
+.task-bg-view {
+}
+.task-bg-image {
+    width:100%;
+}
+.task-title-view {
+    width:100%;
+    position: absolute;
+    top:350rpx;
+}
+.task-title-image-1 {
+    width:153rpx;
+    height:35rpx;
+}
+.task-title-image-0 {
+    width:125rpx;
+    height:35rpx;
+}
+.task-back {
+    position: absolute;
+    transform:scaleX(-1);
+    padding: 20rpx 20rpx 0rpx 0rpx;
+}
+.radius-1 {
+    border-radius: 20rpx;
+    height: 40rpx;
+    background-color: white;
+}
+.radius-text-1 {
+    font-size: 20rpx;
+    color: #7c7f86;
+    padding: 0rpx 10rpx 0rpx 10rpx;
+}
+.task-list-title {
+    padding-left:20rpx;
+    padding-right:20rpx;
+}
+.task-list-title-text {
+    font-size: 30rpx;
+    color: #7c7f86;
+}
+.tesk-list-item {
+    background-color: white;
+    margin-top: 10rpx;
+}
+.task-list-item-button-up {
+    border-radius: 25rpx;
+    height: 50rpx;
+    background-color:#ffc624;
+    color: white;
+    padding: 5rpx 15rpx 5rpx 15rpx;
+}
