@@ -5,7 +5,20 @@ Page({
    * 页面的初始数据
    */
   data: {
-    currentTab:0
+    autoplay:false,
+    currentTab:0,
+    winWidth: 0,
+    winHeight: 0,
+    gameLists: [
+      { "id": 100007, "lv": 37, "desc": "玩家太懒了，什么也没有留下。", "game": "你画我猜", "man": 3, "woman": 3 },
+      { "id": 100009, "lv": 37, "desc": "玩家太懒了，什么也没有留下。", "game": "你画我猜", "man": 6, "woman": 0 },
+      { "id": 100011, "lv": 37, "desc": "玩家太懒了，什么也没有留下。", "game": "你画我猜", "man": 3, "woman": 3 }
+    ],
+    roomLists: [
+      { "id": 100001, "lv": 37, "desc": "玩家太懒了，什么也没有留下。", "game": "你画我猜", "man": 3, "woman": 3 },
+      { "id": 100002, "lv": 37, "desc": "玩家太懒了，什么也没有留下。", "game": "你画我猜", "man": 3, "woman": 3 },
+      { "id": 100003, "lv": 37, "desc": "玩家太懒了，什么也没有留下。", "game": "你画我猜", "man": 3, "woman": 3 }
+    ]
   },
 
   /** 
@@ -27,12 +40,22 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
     wx.setNavigationBarTitle({
       title: '包间',
       success: function(res) {
         // success
       }
     }) 
+    wx.getSystemInfo({
+      success: function (res) {
+        that.setData({
+          winWidth: res.windowWidth,
+          winHeight: res.windowHeight
+        });
+      }
+
+    });  
   },
 
   /**
