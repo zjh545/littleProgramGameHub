@@ -1,0 +1,44 @@
+<!--pages/sign/sign.wxml-->
+<view class="top-view">
+    <Image class="top-view-bg" mode="widthFix" src="../../resource/sign/sign_top_bg.png"/>
+    <text class="text-title-style">每日签到</text>
+    <Image mode="widthFix" class="back sign-back" src="../../resource/common/back.png"/>
+</view>
+<View class="middle-view column-flex flex-align-item">
+    <text class="dateTextStyle">xxxx年xx月xx日</text>
+    <view class="row-flex flex-justify-content-center daysStyle">
+        <view class="dayStyle">日</view>
+        <view class="dayStyle">一</view>
+        <view class="dayStyle">二</view>
+        <view class="dayStyle">三</view>
+        <view class="dayStyle">四</view>
+        <view class="dayStyle">五</view>
+        <view class="dayStyle">六</view>
+    </view>
+    <view class="row-wrap-flex day-list-style">
+        <block wx:for="{{days}}" wx:for-item="daysItem">
+            <view class="day-item-style">
+                <block wx:if="{{daysItem.state == 1}}">
+                    <!-- 已签到 -->
+                    <Image class="day-item-image-style" mode="widthFix" src="../../resource/sign/sign_tag_1.png"/>
+                </block>
+                <block wx:if="{{daysItem.state == 2}}">
+                        <!-- 已补签 -->
+                    <Image class="day-item-image-style" mode="widthFix" src="../../resource/sign/sign_tag_2.png"/>
+                </block> 
+                <block wx:if="{{daysItem.state == 0 || daysItem.state == 3 || daysItem.state == 4}}">
+                        <!-- 已错过 -->
+                        <Image class="day-item-image-style" mode="widthFix" src="../../resource/sign/sign_tag_1.png" style="visibility:hidden"/>
+                </block>
+                <text class="day-item-text-style {{'day-item-text-style-' + daysItem.state}}" >{{daysItem.day}}</text>
+            </view>
+        </block>
+    </view>
+</View>
+<View class="bottom-view">
+    <Image class="bottom-view-bg" mode="widthFix" src="../../resource/sign/sign_bottom_bg.png"/>
+    <view class="sign_button">
+        <Image class="sign_btn_image" mode="widthFix" src="../../resource/sign/sign_btn_n.png"/>
+        <text class="sign_btn_text">签到</text>
+    </view>
+</View>

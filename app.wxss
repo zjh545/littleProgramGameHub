@@ -53,10 +53,16 @@
   display: flex;
   align-items: flex-end;
 }
+.row-wrap-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 
 .image-head {
   width:120rpx;
   height:120rpx;
+  border-radius: 60rpx;
 }
 .image-coin {
   width:45rpx;

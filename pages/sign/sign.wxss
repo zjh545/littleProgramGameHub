@@ -1,0 +1,108 @@
+/* pages/sign/sign.wxss */
+.page-view {
+    /* min-height: 100%;   */
+    height: 100%;
+    width:100%;
+    /* align-items: flex-end; */
+}
+.top-view {
+    position: relative;
+}
+.text-title-style {
+    position: absolute;
+    top: 20rpx;
+    left: 300rpx;
+    color: white;
+}
+.sign-back {
+    position: absolute;
+    left: 20rpx;
+    top:20rpx;
+    transform: scaleX(-1);
+    /* padding-top: 20rpx;
+    padding-right: 20rpx; */
+}
+.top-view-bg {
+    width:100%;
+    /* position: relative; */
+}
+.bottom-view {
+    position: relative;
+}
+.bottom-view-bg {
+    position: relative;
+    width:100%;
+}
+.middle-view {
+    /* margin-top: -10rpx; */
+}
+.daysStyle {
+    width: 90%;
+    padding-top: 5rpx;
+}
+.dateTextStyle {
+    color: #7b7e87;
+}
+.dayStyle {
+    background-color: #f1f1f1;
+    text-align: center;
+    flex:1;
+    color: #7b7e87;
+    padding-top: 10rpx;
+    padding-bottom: 10rpx;
+}
+.day-list-style {
+    width:90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.day-item-style{
+    
+    position: relative;
+    width:12%;
+    padding: 0rpx 0rpx 0rpx 2%;
+    padding-top: -10rpx;
+}
+.day-item-image-style {
+    width:100%;
+}
+.day-item-text-style {
+    position: absolute;
+    top:15rpx;
+    left:40rpx;
+}
+/* 已过期 */
+.day-item-text-style-0 {
+    color: #c7c7c7;
+} 
+/* 已签到 */
+.day-item-text-style-1{
+    color: #33d156;
+} 
+/* 已补签 */
+.day-item-text-style-2{
+    color: #ff3f01;
+} 
+/* 可签到 */
+.day-item-text-style-3 {
+    color:#f2b600;
+}
+/* 以后可签到 */
+.day-item-text-style-4 {
+    color:black;
+}
+.sign_btn_image {
+    width:172rpx;
+    /* position: relative; */
+}
+.sign_btn_text {
+    position: absolute;
+    top:60rpx;
+    left:50rpx;
+    color: white;
+}
+.sign_button {
+    position: absolute;
+    top:40rpx;
+    left:290rpx;
+}

@@ -1,2 +1,59 @@
 <!--pages/harem/harem.wxml-->
-<text>pages/harem/harem.wxml</text>
+<view class="top-view flex-justify-content-center">
+    <view class="row-flex price-view flex-align-item">
+        <view class="column-flex flex-justify-content-center price-view-component">
+            <text class="price-view-desc">他的身价</text>
+            <text class="price-view-num">{{price ? price : 0}}金</text>
+        </view>
+        <view class="price-view-component row-flex flex-justify-content-end flex-align-item">
+            <button class="button-grap flex-align-item">抢到后宫</button>
+            <view class="column-flex">
+                    <text class="master-desc">他的主人</text>
+                    <text class="master-name">简单又困难</text>
+            </view>
+            <Image mode="aspectFit" class="image-head image-head-1" src="../../resource/common/icon.png"/>
+        </view>
+    </view>
+    <Image class="image-head" mode="aspectFit" src="../../resource/common/icon.png"/>
+</view>
+<view class="harem-list-view  row-wrap-flex">
+        <block wx:for="{{haremLists}}" wx:for-item="haremItem">
+            <view class="harem-item-view">
+                <Image class="harem-bg" mode="widthFix" src="{{haremItem.state != 1 ? '../../resource/harem/harem_bg_0.png' : '../../resource/harem/harem_bg_1.png'}}"/>
+                <view class="harem-item-view-1 column-flex flex-align-item">
+                    <view class="row-flex flex-align-item harem-item-top-view">
+                        <Image mode="aspectFit" class="image-head image-head-2" src="../../resource/common/icon.png"/>
+                        <view class="column-flex " style="flex:1;">
+                            <block wx:if="{{haremItem.state == 1}}"> 
+                                <button class="button-nick flex-align-item button-nick-1" hover-class="button-nick-click-1">赐昵称</button>
+                                <text class="nick-text nick-text-1">{{haremItem.nick ? haremItem.nick : "旺财"}}</text>
+                            </block>
+                            <block wx:if="{{haremItem.state != 1}}"> 
+                                <button class="button-nick flex-align-item button-nick-0" hover-class="button-nick-click-0">赐昵称</button>
+                                <text class="nick-text nick-text-0">{{haremItem.nick ? haremItem.nick : "旺财"}}</text>
+                            </block>
+                        </view>
+                    </view>
+                    <view class="split-line"></view>
+                    
+                    <block wx:if="{{haremItem.state == 0}}">
+                        <view class="column-flex harem-item-bottom-view-0">
+                            <text class="harem-item-bottom-view-text-0">空闲中。。。</text>
+                            <button class="button-nick flex-align-item button-nick-0" hover-class="button-nick-click-0">派发任务</button>
+                        </view>
+                    </block>
+                    <block wx:if="{{haremItem.state == 1}}">
+
+                    </block>
+                    <block wx:if="{{haremItem.state == 2}}">
+                        <view class="column-flex harem-item-bottom-view-2 flex-align-item">
+                            <Image class="harem-item-bottom-view-image-2" mode="widthFix" src="../../resource/common/coin_b.png"/>
+                            <text class="harem-item-bottom-view-text-2">任务完成</text>
+                            <view class="harem-item-bottom-view-coin-2 flex-align-item">{{haremItem.get ? haremItem.get : 0}}</view>
+                        </view>
+                    </block>
+                </view>
+            </view>
+        </block>
+    </view>
+

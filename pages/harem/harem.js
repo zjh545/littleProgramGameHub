@@ -5,7 +5,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    haremLists: [
+      {"state" : 0},
+      {"state" : 1},
+      {"state" : 2}
+    ]
   },
 
   /**

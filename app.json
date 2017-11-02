@@ -1,14 +1,14 @@
 {
   "pages": [
+    "pages/sign/sign",
     "pages/game/game",
     "pages/task/task",
-   
+    "pages/harem/harem",
     "pages/room/room",
     "pages/myself/myself",
     "pages/message/message",
     "pages/logs/logs",
-    "pages/index/index",
-    "pages/harem/harem"
+    "pages/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

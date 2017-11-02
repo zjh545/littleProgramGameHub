@@ -23,9 +23,9 @@
   </view>
   <!-- 后宫、福利 -->
   <view class="row-flex flex-align-item view-harem">
-    <view class='row-flex flex-align-item flex-justify-content-center view-harem-item'>
+    <view class='row-flex flex-align-item flex-justify-content-center view-harem-item' bindtap="goToHarem">
       <image class='harem-image'  src="../../resource/game/harem.png"/>
-      <view class='column-flex'>
+      <view class='column-flex' >
         <text>后宫</text>
         <text class='view-harem-item-text'>养奴隶赚金币</text>
       </view>

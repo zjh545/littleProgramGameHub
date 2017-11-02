@@ -64,12 +64,19 @@ page {
 }
 .task-list-item-button-up {
     border-radius: 25rpx;
+    border-width: 1rpx;
+    border-style: solid;
+    border-color: white;
     height: 50rpx;
     background-color:#ffc624;
     color: white;
+    font-size: 30rpx;
 }
-.task-list-item-button-disabled {
+.task-list-item-button-click {
     border-radius: 25rpx;
     height: 50rpx;
-    background-color:#7c7f86;
+    border-color: #ffc624;
+    background-color:white;
+    color:#ffc624; 
+    
 }

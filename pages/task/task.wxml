@@ -22,7 +22,7 @@
             </view>
             <view class="row-flex flex-align-item">
                 <text class="task-list-item-text-3">{{newListItem.cur }}/{{newListItem.max}}</text>
-                <button size="mini"  class="task-list-item-button-up" disabled="{{newListItem.cur >=newListItem.max ? false : true}}">领取</button>
+                <button class="task-list-item-button-up flex-align-item" disabled="{{newListItem.cur >=newListItem.max ? false : true}}" hover-class="task-list-item-button-click">领取</button>
             </view>
         </view>
     </block>
@@ -39,7 +39,7 @@
             </view>
             <view class="row-flex flex-align-item">
                 <text class="task-list-item-text-3">{{dayListItem.cur }}/{{dayListItem.max}}</text>
-                <button size="mini"  class="task-list-item-button-up" disabled="{{dayListItem.cur >= dayListItem.max ? false : true}}">领取</button>
+                <button class="task-list-item-button-up flex-align-item" disabled="{{dayListItem.cur >= dayListItem.max ? false : true}}" hover-class="task-list-item-button-click">领取</button>
             </view>
         </view>
     </block>
